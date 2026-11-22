@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="RC Trading Vault — premium trading courses at a fraction of the original price. Start free: a full FVG lesson and 4 beginner guides inside our Discord. Education only." />
+<link rel="icon" href="data:," />
+<title>RC Trading Vault — Premium Trading Courses, Vault Prices</title>
+
+<!-- Meta Pixel Code — RC Trading Vault (Pixel ID: 1334543985442173) -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1334543985442173');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1334543985442173&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#f4f7fb;
+    --bg-2:#eaf0f8;
+    --surface:#ffffff;
+    --surface-2:#eef3fa;
+    --ink:#0a101c;
+    --ink-2:#3d4b63;
+    --ink-3:#66779a;
+    --line:#d7e0ee;
+    --blue:#0073e6;
+    --blue-bright:#0090ff;
+    --blue-deep:#0057b8;
+    --blue-soft:rgba(0,115,230,.09);
+    --hero-bg:#04060b;
+    --hero-ink:#f2f7ff;
+    --hero-ink-2:#a9bedd;
+    --gold:#e8b33c;
+    --green:#0e9f6e;
+    --radius:14px;
+    --font-body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --font-display:"Archivo","Manrope",system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#04060b;
+      --bg-2:#070b13;
+      --surface:#0a0f1a;
+      --surface-2:#0d1422;
+      --ink:#eef4ff;
+      --ink-2:#a9bedd;
+      --ink-3:#7186ab;
+      --line:#1b2740;
+      --blue:#2e9bff;
+      --blue-bright:#38b6ff;
+      --blue-deep:#2e9bff;
+      --blue-soft:rgba(46,155,255,.12);
+      --hero-bg:#02040a;
+    }
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  }
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--font-body);font-size:16.5px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%}
+  a{color:var(--blue-deep)}
+  :focus-visible{outline:3px solid var(--blue-bright);outline-offset:2px;border-radius:6px}
+
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+  .mono{font-family:var(--font-mono)}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-in{display:flex;align-items:center;gap:18px;min-height:64px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);flex-shrink:0}
+  .brand-mark{
+    width:38px;height:38px;border-radius:9px;background:#04060b;
+    display:grid;place-items:center;border:1px solid #1b2740;flex-shrink:0;
+  }
+  .brand-name{font-family:var(--font-display);font-weight:900;font-size:17px;letter-spacing:.02em;line-height:1.05}
+  .brand-name span{color:var(--blue-bright)}
+  .brand-sub{font-size:10.5px;font-weight:700;letter-spacing:.22em;color:var(--ink-3);text-transform:uppercase}
+  .topnav{display:flex;gap:4px;margin-left:auto}
+  .topnav a{
+    color:var(--ink-2);text-decoration:none;font-weight:700;font-size:14.5px;
+    padding:10px 12px;min-height:44px;display:inline-flex;align-items:center;border-radius:8px;
+  }
+  .topnav a:hover{color:var(--ink);background:var(--blue-soft)}
+  @media (max-width:820px){ .topnav{display:none} }
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    min-height:48px;padding:12px 22px;border-radius:10px;border:0;cursor:pointer;
+    font-family:var(--font-body);font-weight:800;font-size:15.5px;text-decoration:none;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-discord{background:var(--blue);color:#fff}
+  .btn-discord:hover{background:var(--blue-bright)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--blue)}
+  .btn-hero-ghost{background:rgba(255,255,255,.04);color:var(--hero-ink);border:1.5px solid #26355a}
+  .btn-hero-ghost:hover{border-color:var(--blue-bright)}
+  .btn-sm{min-height:44px;padding:9px 18px;font-size:14.5px}
+  .topbar .btn{margin-left:8px;white-space:nowrap}
+  @media (max-width:820px){ .topbar .btn{margin-left:auto} }
+  @media (max-width:640px){
+    .brand{gap:9px}
+    .brand-mark{width:34px;height:34px}
+    .brand-name{font-size:14.5px}
+    .brand-sub{display:none}
+    .topbar .btn{min-height:44px;padding:9px 13px;font-size:13.5px}
+    .hero-stat b{font-size:20px}
+    .hero-stats{gap:10px}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--hero-bg);color:var(--hero-ink);overflow:hidden;position:relative}
+  .hero-grid-bg{
+    position:absolute;inset:0;pointer-events:none;opacity:.5;
+    background:
+      linear-gradient(rgba(46,155,255,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(46,155,255,.05) 1px, transparent 1px);
+    background-size:56px 56px;
+    mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 30%, transparent 75%);
+    -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 30%, transparent 75%);
+  }
+  .hero-in{position:relative;padding:64px 0 0}
+  .hero-cols{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+  @media (max-width:920px){ .hero-cols{grid-template-columns:1fr} .hero-in{padding-top:44px} }
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid #26355a;background:rgba(46,155,255,.08);color:#9fd0ff;
+    font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px;min-height:36px;
+  }
+  .hero-tag .dot{width:8px;height:8px;border-radius:50%;background:#2ee59d;flex-shrink:0}
+  h1{
+    font-family:var(--font-display);font-weight:900;letter-spacing:-.015em;
+    font-size:clamp(34px,5.2vw,56px);line-height:1.04;margin:20px 0 18px;
+  }
+  h1 .hl{color:var(--blue-bright)}
+  .hero-sub{color:var(--hero-ink-2);font-size:18px;max-width:34em;margin:0 0 28px}
+  .hero-sub strong{color:var(--hero-ink)}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .hero-note{margin-top:16px;font-size:13.5px;color:#7186ab}
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px;max-width:520px;
+  }
+  .hero-stat{border-top:2px solid #1b2740;padding-top:12px}
+  .hero-stat b{display:block;font-family:var(--font-display);font-weight:800;font-size:24px;color:#fff;line-height:1.1}
+  .hero-stat span{font-size:13px;color:var(--hero-ink-2)}
+
+  .chart-card{
+    background:#070c16;border:1px solid #1b2740;border-radius:16px;padding:18px 18px 10px;
+    box-shadow:0 24px 60px rgba(0,0,0,.5);
+  }
+  .chart-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:0 2px 8px}
+  .chart-head .pair{font-family:var(--font-mono);font-size:13px;color:#9fd0ff;letter-spacing:.06em}
+  .chart-head .tag-fvg{font-family:var(--font-mono);font-size:11.5px;color:#04060b;background:var(--blue-bright);font-weight:600;padding:3px 9px;border-radius:5px}
+  .chart-foot{display:flex;gap:16px;flex-wrap:wrap;padding:10px 2px 8px;font-family:var(--font-mono);font-size:12px;color:#7186ab}
+  .chart-foot b{color:#cfe4ff;font-weight:600}
+
+  /* ticker */
+  .ticker{
+    margin-top:52px;border-top:1px solid #141f36;border-bottom:1px solid #141f36;
+    background:rgba(255,255,255,.015);overflow:hidden;position:relative;
+  }
+  .ticker-track{display:flex;width:max-content;animation:tick 46s linear infinite;padding:11px 0}
+  .ticker:hover .ticker-track{animation-play-state:paused}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .tick-item{
+    font-family:var(--font-mono);font-size:13px;color:#8fa8cc;white-space:nowrap;padding:0 22px;
+    display:inline-flex;gap:9px;align-items:center;
+  }
+  .tick-item b{color:#eaf3ff;font-weight:600}
+  .tick-item .was{color:#5c6f92;text-decoration:line-through}
+  .tick-item .now{color:#2ee59d;font-weight:600}
+  .tick-sep{color:#26355a}
+
+  /* ---------- sections ---------- */
+  section{padding:72px 0}
+  section.tight{padding:52px 0}
+  .sec-head{max-width:720px;margin-bottom:36px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  h2{font-family:var(--font-display);font-weight:800;letter-spacing:-.01em;font-size:clamp(26px,3.6vw,38px);line-height:1.12;margin:0 0 12px}
+  .sec-head p{color:var(--ink-2);font-size:17px;margin:0}
+  .alt{background:var(--bg-2)}
+
+  /* free lesson */
+  .lesson-cols{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+  @media (max-width:920px){ .lesson-cols{grid-template-columns:1fr} }
+  .video-card{
+    display:block;text-decoration:none;border-radius:16px;overflow:hidden;position:relative;
+    background:#04060b;border:1px solid #1b2740;aspect-ratio:16/9;
+  }
+  .video-card svg.bg{position:absolute;inset:0;width:100%;height:100%}
+  .video-card .play{
+    position:absolute;inset:0;display:grid;place-items:center;
+  }
+  .play-btn{
+    width:76px;height:76px;border-radius:50%;background:var(--blue);display:grid;place-items:center;
+    box-shadow:0 10px 34px rgba(0,115,230,.55);transition:transform .18s ease, background .18s ease;
+  }
+  .video-card:hover .play-btn{transform:scale(1.07);background:var(--blue-bright)}
+  .video-meta{
+    position:absolute;left:0;right:0;bottom:0;padding:38px 18px 14px;color:#fff;
+    background:linear-gradient(transparent, rgba(2,4,10,.88));
+    display:flex;justify-content:space-between;align-items:flex-end;gap:12px;
+  }
+  .video-meta .vt{font-family:var(--font-display);font-weight:800;font-size:17px;line-height:1.25}
+  .video-meta .vs{font-size:13px;color:#a9bedd}
+  .video-meta .dur{font-family:var(--font-mono);font-size:12.5px;background:rgba(255,255,255,.14);padding:4px 9px;border-radius:5px;flex-shrink:0}
+  .learn-list{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:13px}
+  .learn-list li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-2);font-size:16px}
+  .learn-list li b{color:var(--ink)}
+  .check{
+    width:24px;height:24px;border-radius:7px;background:var(--blue-soft);color:var(--blue);
+    display:grid;place-items:center;flex-shrink:0;margin-top:1px;
+  }
+  .credit-box{
+    border:1px solid var(--line);background:var(--surface);border-radius:var(--radius);
+    padding:16px 18px;font-size:14.5px;color:var(--ink-2);
+  }
+  .credit-box b{color:var(--ink)}
+
+  /* guides */
+  .guides{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media (max-width:1020px){ .guides{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:560px){ .guides{grid-template-columns:1fr} }
+  .guide{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .guide .gnum{font-family:var(--font-mono);font-size:12.5px;color:var(--blue);font-weight:600;letter-spacing:.08em}
+  .guide h3{font-family:var(--font-display);font-size:18.5px;font-weight:800;margin:0;line-height:1.25}
+  .guide p{margin:0;color:var(--ink-2);font-size:14.5px;flex:1}
+  .guide .gfoot{font-family:var(--font-mono);font-size:12px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:10px}
+
+  /* inside the vault */
+  .inside-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  @media (max-width:920px){ .inside-cols{grid-template-columns:1fr} }
+  .chan-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+  .chan-list li{
+    display:flex;gap:12px;align-items:baseline;padding:13px 18px;border-bottom:1px solid var(--line);
+    font-size:15px;
+  }
+  .chan-list li:last-child{border-bottom:0}
+  .chan-list .hash{font-family:var(--font-mono);color:var(--blue);font-weight:600;flex-shrink:0}
+  .chan-list .who{margin-left:auto;font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;flex-shrink:0;padding-left:10px}
+  .who.free{color:var(--green)} .who.paid{color:var(--gold)} .who.all{color:var(--ink-3)}
+  .inside-points{display:grid;gap:16px}
+  .ipoint{display:flex;gap:14px}
+  .ipoint .ic{
+    width:44px;height:44px;border-radius:11px;background:var(--blue-soft);color:var(--blue);
+    display:grid;place-items:center;flex-shrink:0;
+  }
+  .ipoint h3{margin:0 0 3px;font-size:16.5px;font-family:var(--font-display);font-weight:800}
+  .ipoint p{margin:0;color:var(--ink-2);font-size:15px}
+
+  /* catalogue */
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+  .filter-btn{
+    min-height:44px;padding:9px 18px;border-radius:999px;cursor:pointer;
+    border:1.5px solid var(--line);background:var(--surface);color:var(--ink-2);
+    font-family:var(--font-body);font-weight:800;font-size:14.5px;
+  }
+  .filter-btn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .courses{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:1020px){ .courses{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:620px){ .courses{grid-template-columns:1fr} }
+  .course{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;display:flex;flex-direction:column;gap:7px;
+  }
+  .course[hidden]{display:none}
+  .course .c-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .course h3{font-family:var(--font-display);font-size:19px;font-weight:800;margin:0;line-height:1.22}
+  .course .creator{font-size:13.5px;color:var(--ink-3);font-weight:700}
+  .course p{margin:0;color:var(--ink-2);font-size:14.5px;flex:1}
+  .badge{
+    font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.05em;
+    padding:4px 9px;border-radius:5px;flex-shrink:0;text-transform:uppercase;
+  }
+  .badge.life{background:rgba(232,179,60,.16);color:#a97b12}
+  .badge.mo{background:var(--blue-soft);color:var(--blue)}
+  @media (prefers-color-scheme: dark){ .badge.life{color:var(--gold)} }
+  .price-row{display:flex;align-items:baseline;gap:10px;border-top:1px dashed var(--line);padding-top:13px;margin-top:6px}
+  .price-row .was{font-family:var(--font-mono);font-size:13.5px;color:var(--ink-3);text-decoration:line-through}
+  .price-row .now{font-family:var(--font-display);font-weight:900;font-size:23px;color:var(--ink)}
+  .price-row .per{font-size:13px;color:var(--ink-3);font-weight:700}
+  .price-row .save{margin-left:auto;font-family:var(--font-mono);font-size:12px;color:var(--green);font-weight:600}
+
+  /* bundle */
+  .bundle-band{background:var(--hero-bg);color:var(--hero-ink);border-radius:22px;padding:44px;position:relative;overflow:hidden}
+  @media (max-width:640px){ .bundle-band{padding:28px 22px} }
+  .bundle-cols{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;position:relative}
+  @media (max-width:920px){ .bundle-cols{grid-template-columns:1fr} }
+  .bundle-band h2{color:#fff}
+  .bundle-band .lead{color:var(--hero-ink-2);font-size:17px}
+  .bundle-includes{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+  .bundle-includes li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:#d7e6fb}
+  .bundle-includes .check{background:rgba(46,155,255,.16);color:#7cc2ff}
+  .bundle-includes .li-price{margin-left:auto;font-family:var(--font-mono);font-size:13.5px;color:#8fa8cc;flex-shrink:0;padding-left:12px}
+  .price-card{
+    background:#0a1120;border:1px solid #26355a;border-radius:16px;padding:28px;align-self:start;
+  }
+  .price-card .pc-label{font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#7cc2ff}
+  .price-card .pc-price{display:flex;align-items:baseline;gap:12px;margin:10px 0 2px}
+  .price-card .pc-price b{font-family:var(--font-display);font-weight:900;font-size:52px;color:#fff;line-height:1}
+  .price-card .pc-price s{font-family:var(--font-mono);color:#7186ab;font-size:19px}
+  .price-card .pc-sub{color:var(--hero-ink-2);font-size:14.5px;margin:0 0 20px}
+  .price-card .btn{width:100%}
+  .pc-rows{margin-top:20px;border-top:1px solid #1b2740;padding-top:16px;display:grid;gap:9px;font-size:14px;color:var(--hero-ink-2)}
+  .pc-rows div{display:flex;justify-content:space-between;gap:12px}
+  .pc-rows b{color:#eaf3ff;font-family:var(--font-mono);font-weight:600}
+  .mini-plans{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+  @media (max-width:620px){ .mini-plans{grid-template-columns:1fr} }
+  .mini-plan{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .mini-plan h3{font-family:var(--font-display);font-size:18px;font-weight:800;margin:0 0 4px}
+  .mini-plan .mp-price{font-family:var(--font-display);font-weight:900;font-size:26px}
+  .mini-plan .mp-price span{font-size:14px;color:var(--ink-3);font-family:var(--font-body);font-weight:700}
+  .mini-plan p{margin:6px 0 0;color:var(--ink-2);font-size:14.5px}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+  @media (max-width:1020px){ .steps{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:560px){ .steps{grid-template-columns:1fr} }
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .step .snum{
+    font-family:var(--font-mono);font-weight:600;font-size:13px;color:#fff;background:var(--blue);
+    width:30px;height:30px;border-radius:8px;display:grid;place-items:center;margin-bottom:13px;
+  }
+  .step h3{font-family:var(--font-display);font-size:17px;font-weight:800;margin:0 0 5px}
+  .step p{margin:0;color:var(--ink-2);font-size:14.5px}
+
+  /* faq */
+  .faq{max-width:780px;margin:0 auto;display:grid;gap:10px}
+  .faq details{background:var(--surface);border:1px solid var(--line);border-radius:12px}
+  .faq summary{
+    cursor:pointer;padding:17px 20px;font-weight:800;font-size:16px;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:56px;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .chev{color:var(--blue);flex-shrink:0;transition:transform .2s ease}
+  .faq details[open ] summary .chev{transform:rotate(180deg)}
+  .faq .a{padding:0 20px 18px;color:var(--ink-2);font-size:15.5px}
+  .faq .a p{margin:0}
+
+  /* final cta + footer */
+  .final{background:var(--hero-bg);color:var(--hero-ink);text-align:center}
+  .final h2{color:#fff;max-width:640px;margin-left:auto;margin-right:auto}
+  .final p{color:var(--hero-ink-2);max-width:560px;margin:0 auto 26px}
+  .final .hero-ctas{justify-content:center}
+  footer{border-top:1px solid var(--line);padding:34px 0 110px;background:var(--bg)}
+  @media (min-width:821px){ footer{padding-bottom:40px} }
+  .foot-cols{display:flex;flex-wrap:wrap;gap:26px;justify-content:space-between;align-items:flex-start}
+  .foot-links{display:flex;flex-wrap:wrap;gap:6px 20px}
+  .foot-links a{color:var(--ink-2);text-decoration:none;font-weight:700;font-size:14.5px;padding:8px 2px;min-height:40px;display:inline-flex;align-items:center}
+  .foot-links a:hover{color:var(--ink)}
+  .disclaimer{
+    margin-top:24px;border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+    color:var(--ink-3);font-size:13.5px;background:var(--surface);
+  }
+
+  /* mobile sticky cta */
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    background:color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);
+  }
+  .sticky-cta .btn{width:100%}
+  @media (max-width:820px){ .sticky-cta{display:block} }
+
+  .copied-toast{
+    position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(16px);
+    background:var(--ink);color:var(--bg);font-weight:700;font-size:14.5px;
+    padding:11px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:70;
+  }
+  .copied-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- ======================= TOP BAR ======================= -->
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top" aria-label="RC Trading Vault — back to top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20V9l8-5 8 5v11" stroke="#2e9bff" stroke-width="2" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+      </span>
+      <span>
+        <span class="brand-name">RC TRADING <span>VAULT</span></span><br />
+        <span class="brand-sub">Trading Education</span>
+      </span>
+    </a>
+    <nav class="topnav" aria-label="Page sections">
+      <a href="#free-lesson">Free Lesson</a>
+      <a href="#inside">Inside the Vault</a>
+      <a href="#courses">Courses</a>
+      <a href="#bundle">Bundle</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-discord btn-sm" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">Join Discord — Free</a>
+  </div>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<div class="hero" id="top">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-cols">
+      <div>
+        <span class="hero-tag"><span class="dot"></span> Free lesson + 4 free guides — no card needed</span>
+        <h1>Premium trading courses.<br /><span class="hl">Vault prices.</span></h1>
+        <p class="hero-sub">RC Trading Vault gives you access to well-known trading courses — resold <strong>with the original sellers' permission</strong> — at around <strong>15% of the original price, never more than $90</strong>. Start free inside our Discord, learn first, and only pay when you're ready.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-discord" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5a18 18 0 0 1 1.7 2.1 15.6 15.6 0 0 0-13.8 0A18 18 0 0 1 4.8 3.5L4.6 3a19.8 19.8 0 0 0-4.9 1.5A20.4 20.4 0 0 0-.2 18.1a19.9 19.9 0 0 0 6 3l.5-.7a12.9 12.9 0 0 1-1-1.6c.3-.2.6-.5.9-.7a14.2 14.2 0 0 0 12.8 0l.9.7c-.3.6-.6 1.1-1 1.6l.5.7a19.8 19.8 0 0 0 6-3 20.3 20.3 0 0 0-3.5-13.7ZM8.7 15.3c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm6.6 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>
+            Join the Discord — Free
+          </a>
+          <a class="btn btn-hero-ghost" href="#free-lesson">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg>
+            Watch the free FVG lesson
+          </a>
+        </div>
+        <p class="hero-note">Free members get the lesson, the guides and daily market posts. Paid courses unlock private channels — only for buyers of that course.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>20+</b><span>premium courses in the catalogue</span></div>
+          <div class="hero-stat"><b>$90 max</b><span>every Vault price is capped at $90</span></div>
+          <div class="hero-stat"><b>Daily</b><span>new lessons &amp; market posts</span></div>
+        </div>
+      </div>
+
+      <div class="chart-card" aria-hidden="true">
+        <div class="chart-head">
+          <span class="pair">FVG · FAIR VALUE GAP</span>
+          <span class="tag-fvg">FREE LESSON</span>
+        </div>
+        <svg viewBox="0 0 460 300" width="100%" role="img" aria-label="Illustrative candlestick chart showing a fair value gap zone">
+          <defs>
+            <linearGradient id="fvgfill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2e9bff" stop-opacity=".34"/>
+              <stop offset="1" stop-color="#2e9bff" stop-opacity=".10"/>
+            </linearGradient>
+          </defs>
+          <g stroke="#16233d" stroke-width="1">
+            <line x1="0" y1="60" x2="460" y2="60"/><line x1="0" y1="120" x2="460" y2="120"/>
+            <line x1="0" y1="180" x2="460" y2="180"/><line x1="0" y1="240" x2="460" y2="240"/>
+          </g>
+          <rect x="150" y="118" width="310" height="44" fill="url(#fvgfill)"/>
+          <line x1="150" y1="118" x2="460" y2="118" stroke="#2e9bff" stroke-width="1" stroke-dasharray="5 4"/>
+          <line x1="150" y1="162" x2="460" y2="162" stroke="#2e9bff" stroke-width="1" stroke-dasharray="5 4"/>
+          <text x="392" y="110" fill="#7cc2ff" font-family="IBM Plex Mono, monospace" font-size="11">FVG ZONE</text>
+          <!-- candles -->
+          <g>
+            <line x1="40" y1="196" x2="40" y2="238" stroke="#3d5a8a" stroke-width="2"/><rect x="29" y="204" width="22" height="26" fill="#274a7c"/>
+            <line x1="82" y1="182" x2="82" y2="222" stroke="#3d5a8a" stroke-width="2"/><rect x="71" y="190" width="22" height="24" fill="#274a7c"/>
+            <line x1="124" y1="150" x2="124" y2="206" stroke="#2ee59d" stroke-width="2"/><rect x="113" y="160" width="22" height="38" fill="#2ee59d"/>
+            <line x1="166" y1="96" x2="166" y2="152" stroke="#2ee59d" stroke-width="2"/><rect x="155" y="104" width="22" height="40" fill="#2ee59d"/>
+            <line x1="208" y1="66" x2="208" y2="118" stroke="#2ee59d" stroke-width="2"/><rect x="197" y="74" width="22" height="36" fill="#2ee59d"/>
+            <line x1="250" y1="58" x2="250" y2="102" stroke="#3d5a8a" stroke-width="2"/><rect x="239" y="66" width="22" height="28" fill="#274a7c"/>
+            <line x1="292" y1="70" x2="292" y2="112" stroke="#2ee59d" stroke-width="2"/><rect x="281" y="78" width="22" height="26" fill="#2ee59d"/>
+            <line x1="334" y1="88" x2="334" y2="138" stroke="#ff6b6b" stroke-width="2"/><rect x="323" y="96" width="22" height="32" fill="#c04545"/>
+            <line x1="376" y1="112" x2="376" y2="158" stroke="#ff6b6b" stroke-width="2"/><rect x="365" y="120" width="22" height="30" fill="#c04545"/>
+            <line x1="418" y1="104" x2="418" y2="150" stroke="#2ee59d" stroke-width="2"/><rect x="407" y="112" width="22" height="28" fill="#2ee59d"/>
+          </g>
+          <path d="M40 214 L82 200 L124 178 L166 122 L208 92 L250 82 L292 92 L334 112 L376 136 L418 124" fill="none" stroke="#38b6ff" stroke-width="1.6" stroke-dasharray="2 5" opacity=".65"/>
+        </svg>
+        <div class="chart-foot">
+          <span>TOPIC <b>Fair Value Gaps</b></span>
+          <span>SOURCE <b>FVGC Premium — Capital Complex</b></span>
+          <span>COST <b>Free in Discord</b></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="tickerTrack">
+        <span class="tick-item"><b>FVGC Premium</b> <span class="was">$749</span> <span class="now">$90 lifetime</span></span><span class="tick-sep">•</span>
+        <span class="tick-item"><b>393 Premium</b> <span class="was">$500/mo</span> <span class="now">$75/mo</span></span><span class="tick-sep">•</span>
+        <span class="tick-item"><b>MoneyMotive A+</b> <span class="was">$1,999</span> <span class="now">$90 lifetime</span></span><span class="tick-sep">•</span>
+        <span class="tick-item"><b>SuperLuckeee General</b> <span class="now">$20/mo</span></span><span class="tick-sep">•</span>
+        <span class="tick-item"><b>FVGC Ultimate</b> <span class="now">$15/mo</span></span><span class="tick-sep">•</span>
+        <span class="tick-item"><b>ZTRADEZ Full Access</b> <span class="now">$10/mo</span></span><span class="tick-sep">•</span>
+        <span class="tick-item"><b>Inter Equity Trading</b> <span class="was">$650</span> <span class="now">$90 one-time</span></span><span class="tick-sep">•</span>
+        <span class="tick-item"><b>Beginner Lifetime Bundle</b> <span class="was">$270</span> <span class="now">$199 one-time</span></span><span class="tick-sep">•</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+<!-- ======================= FREE LESSON ======================= -->
+<section id="free-lesson">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Start with a real lesson — free</h2>
+      <p>No teaser, no locked preview. This is an actual sample lesson from a paid course, shared free with the creator's permission so you can judge the teaching before you spend anything.</p>
+    </div>
+    <div class="lesson-cols">
+      <a class="video-card" href="https://www.youtube.com/@rctradingvault" target="_blank" rel="noopener" data-track="youtube" aria-label="Watch the free FVG lesson on the RC Trading Vault YouTube channel">
+        <svg class="bg" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="640" height="360" fill="#05080f"/>
+          <g stroke="#101c33" stroke-width="1">
+            <line x1="0" y1="70" x2="640" y2="70"/><line x1="0" y1="140" x2="640" y2="140"/>
+            <line x1="0" y1="210" x2="640" y2="210"/><line x1="0" y1="280" x2="640" y2="280"/>
+          </g>
+          <rect x="215" y="128" width="425" height="52" fill="#2e9bff" opacity=".16"/>
+          <line x1="215" y1="128" x2="640" y2="128" stroke="#2e9bff" stroke-dasharray="6 5"/>
+          <line x1="215" y1="180" x2="640" y2="180" stroke="#2e9bff" stroke-dasharray="6 5"/>
+          <g>
+            <line x1="70" y1="215" x2="70" y2="262" stroke="#3d5a8a" stroke-width="3"/><rect x="56" y="224" width="28" height="30" fill="#274a7c"/>
+            <line x1="130" y1="196" x2="130" y2="244" stroke="#3d5a8a" stroke-width="3"/><rect x="116" y="205" width="28" height="30" fill="#274a7c"/>
+            <line x1="190" y1="158" x2="190" y2="224" stroke="#2ee59d" stroke-width="3"/><rect x="176" y="168" width="28" height="46" fill="#2ee59d"/>
+            <line x1="250" y1="100" x2="250" y2="168" stroke="#2ee59d" stroke-width="3"/><rect x="236" y="110" width="28" height="48" fill="#2ee59d"/>
+            <line x1="310" y1="70" x2="310" y2="130" stroke="#2ee59d" stroke-width="3"/><rect x="296" y="80" width="28" height="42" fill="#2ee59d"/>
+            <line x1="370" y1="62" x2="370" y2="112" stroke="#3d5a8a" stroke-width="3"/><rect x="356" y="72" width="28" height="32" fill="#274a7c"/>
+            <line x1="430" y1="76" x2="430" y2="124" stroke="#2ee59d" stroke-width="3"/><rect x="416" y="86" width="28" height="30" fill="#2ee59d"/>
+            <line x1="490" y1="96" x2="490" y2="152" stroke="#c04545" stroke-width="3"/><rect x="476" y="106" width="28" height="38" fill="#c04545"/>
+            <line x1="550" y1="118" x2="550" y2="168" stroke="#c04545" stroke-width="3"/><rect x="536" y="128" width="28" height="32" fill="#c04545"/>
+          </g>
+        </svg>
+        <span class="play"><span class="play-btn"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></span></span>
+        <span class="video-meta">
+          <span>
+            <span class="vt">Fair Value Gaps, Explained Properly</span><br />
+            <span class="vs">Sample lesson · FVGC Premium by Capital Complex</span>
+          </span>
+          <span class="dur">YouTube</span>
+        </span>
+      </a>
+      <div>
+        <ul class="learn-list">
+          <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>What a Fair Value Gap actually is</b> — the three-candle pattern, and why price so often comes back to it.</span></li>
+          <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>How to mark the zone on your chart</b> — step by step, the way the course teaches it.</span></li>
+          <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>Where liquidity sits around the gap</b> — so you know what would prove the idea wrong, not just right.</span></li>
+          <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>The full lesson is also posted free</b> in the Discord's #free-videos channel, with the 4 guides below.</span></li>
+        </ul>
+        <div class="hero-ctas">
+          <a class="btn btn-discord" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">Get it free in Discord</a>
+          <button class="btn btn-ghost" type="button" id="copyLinkBtn">Copy Discord invite link</button>
+        </div>
+        <p class="credit-box" style="margin-top:18px">Sample lesson from <b>FVGC Premium — Capital Complex</b>, shared free with the creator's permission and credited to the course. The complete course is available inside the Vault.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FREE GUIDES ======================= -->
+<section class="alt tight" id="guides">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Plus 4 free beginner guides</h2>
+      <p>Posted in the Discord's #free-resources channel for every member — no purchase, no upsell wall. Read them in an evening, keep them forever.</p>
+    </div>
+    <div class="guides">
+      <article class="guide">
+        <span class="gnum">GUIDE 01</span>
+        <h3>FVG Basics</h3>
+        <p>Spotting fair value gaps, marking the zone, and the checklist to run before you ever take a trade based on one.</p>
+        <span class="gfoot">FREE · #free-resources</span>
+      </article>
+      <article class="guide">
+        <span class="gnum">GUIDE 02</span>
+        <h3>Risk First</h3>
+        <p>Position sizing and stop placement in plain language — the part that keeps beginners in the game long enough to actually learn.</p>
+        <span class="gfoot">FREE · #free-resources</span>
+      </article>
+      <article class="guide">
+        <span class="gnum">GUIDE 03</span>
+        <h3>Order Types, No Confusion</h3>
+        <p>Limit orders vs stop orders — what each one really does, when traders use which, and the mistakes that cost people money.</p>
+        <span class="gfoot">FREE · #free-resources</span>
+      </article>
+      <article class="guide">
+        <span class="gnum">GUIDE 04</span>
+        <h3>Reading Liquidity</h3>
+        <p>Where price is likely drawn to next — equal highs, equal lows and liquidity targets, explained with chart examples.</p>
+        <span class="gfoot">FREE · #free-resources</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= INSIDE THE VAULT ======================= -->
+<section id="inside">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What's inside the Discord</h2>
+      <p>One server, clearly organised. Free members see the free side. Buyers unlock a private channel for each course they own — nobody else can see it.</p>
+    </div>
+    <div class="inside-cols">
+      <ul class="chan-list" aria-label="Discord channels">
+        <li><span class="hash">#welcome</span> Start here &amp; how everything works <span class="who all">Everyone</span></li>
+        <li><span class="hash">#free-videos</span> Free sample lessons, credited to each course <span class="who free">Free</span></li>
+        <li><span class="hash">#free-resources</span> The 4 beginner guides + resources <span class="who free">Free</span></li>
+        <li><span class="hash">#announcements</span> New courses &amp; important updates <span class="who all">Everyone</span></li>
+        <li><span class="hash">#course-catalogue</span> Every course with its Vault price <span class="who all">Everyone</span></li>
+        <li><span class="hash">#course-updates</span> New modules as they're studied &amp; posted <span class="who all">Everyone</span></li>
+        <li><span class="hash">#course-reviews</span> What members say about each course <span class="who all">Everyone</span></li>
+        <li><span class="hash">#purchase-access</span> How to buy &amp; get your access <span class="who all">Everyone</span></li>
+        <li><span class="hash">#open-ticket</span> Support — purchases, payments, access help <span class="who all">Everyone</span></li>
+        <li><span class="hash">Premium channels</span> One private channel per course, buyers only <span class="who paid">Buyers</span></li>
+        <li><span class="hash">#premium-lounge</span> Vault Plus members' private lounge <span class="who paid">Plus</span></li>
+      </ul>
+      <div class="inside-points">
+        <div class="ipoint">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.2c0 4.6 3.2 7.7 7.5 9.3 4.3-1.6 7.5-4.7 7.5-9.3V6L12 3Z"/><path d="m9 11.6 2.2 2.2L15.4 9.6"/></svg></span>
+          <div>
+            <h3>Authorised reselling</h3>
+            <p>Every course in the Vault is resold with permission confirmed from the original seller. Creators are named and credited — including in the free lessons.</p>
+          </div>
+        </div>
+        <div class="ipoint">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4a1 1 0 0 0-1-1H6.5A2.5 2.5 0 0 0 4 5.5v14Z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span>
+          <div>
+            <h3>Studied daily, posted daily</h3>
+            <p>We work through the courses module by module and post fresh lesson breakdowns every day — one per premium course channel, plus free public posts.</p>
+          </div>
+        </div>
+        <div class="ipoint">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.6A8.5 8.5 0 1 1 21 11.5Z"/></svg></span>
+          <div>
+            <h3>Real support, six ticket types</h3>
+            <p>Course purchases, membership enquiries, payment assistance, access problems, general support, and refund &amp; cancellation enquiries — open a ticket and a human process starts.</p>
+          </div>
+        </div>
+        <div class="ipoint">
+          <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+          <div>
+            <h3>Education only, always</h3>
+            <p>No signals, no "guaranteed profit" talk, no fake results. Market analysis for learning — what a level is, what would change the view, and where the risk sits.</p>
+          </div>
+        </div>
+        <a class="btn btn-discord" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord" style="align-self:flex-start">See it yourself — join free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= COURSES ======================= -->
+<section class="alt" id="courses">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The catalogue, honestly priced</h2>
+      <p>Vault pricing is simple: roughly 15% of the original price, rounded fairly, and <strong>capped at $90</strong> — even when the original costs thousands. Every sellable course in the Vault is listed below — the live line-up is also in #course-catalogue.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter courses">
+      <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All courses</button>
+      <button class="filter-btn" type="button" data-filter="lifetime" aria-pressed="false">Lifetime / one-time</button>
+      <button class="filter-btn" type="button" data-filter="monthly" aria-pressed="false">Monthly</button>
+    </div>
+
+    <div class="courses" id="courseGrid">
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>FVGC Premium</h3><span class="badge life">Lifetime</span></div>
+        <span class="creator">Capital Complex · Instructor: Ryley</span>
+        <p>Fair value gaps, liquidity and order blocks taught as a complete system. The Vault's flagship — and the source of the free lesson above.</p>
+        <div class="price-row"><span class="was">$749</span><span class="now">$90</span><span class="per">one-time</span><span class="save">SAVE 88%</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>MoneyMotive A+</h3><span class="badge life">Lifetime</span></div>
+        <span class="creator">MoneyMotive</span>
+        <p>In-depth written trading guides — the A+ setups, broken down step by step in text you can re-read at your own pace.</p>
+        <div class="price-row"><span class="was">$1,999</span><span class="now">$90</span><span class="per">lifetime</span><span class="save">SAVE 95%</span></div>
+      </article>
+
+      <article class="course" data-kind="monthly">
+        <div class="c-top"><h3>Andrew's Bootcamp</h3><span class="badge mo">Monthly</span></div>
+        <span class="creator">SuperLuckeee · Creator: Andrew</span>
+        <p>72 lessons, 41+ hours on FVG, volume price action and liquidity. Vault access is the General tier.</p>
+        <div class="price-row"><span class="was">$145/mo</span><span class="now">$20</span><span class="per">/month</span><span class="save">SAVE 86%</span></div>
+      </article>
+
+      <article class="course" data-kind="monthly">
+        <div class="c-top"><h3>393 Premium</h3><span class="badge mo">Monthly</span></div>
+        <span class="creator">393 Tickers · Creator: Winson Wang</span>
+        <p>A premium ticker-focused community and course library for traders who follow a watchlist-driven process.</p>
+        <div class="price-row"><span class="was">$500/mo</span><span class="now">$75</span><span class="per">/month</span><span class="save">SAVE 85%</span></div>
+      </article>
+
+      <article class="course" data-kind="monthly">
+        <div class="c-top"><h3>FVGC Ultimate</h3><span class="badge mo">Monthly</span></div>
+        <span class="creator">Capital Complex</span>
+        <p>The ongoing FVGC membership tier — pairs naturally with FVGC Premium for traders who want the full Capital Complex path.</p>
+        <div class="price-row"><span class="now">$15</span><span class="per">/month</span></div>
+      </article>
+
+      <article class="course" data-kind="monthly">
+        <div class="c-top"><h3>ZTRADEZ Full Access</h3><span class="badge mo">Monthly</span></div>
+        <span class="creator">ZTRADEZ</span>
+        <p>Full-access membership at the lowest monthly price in the Vault — an easy first paid step after the free material.</p>
+        <div class="price-row"><span class="now">$10</span><span class="per">/month</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Inter Equity Trading</h3><span class="badge life">One-time</span></div>
+        <span class="creator">Forex · Inter Equity</span>
+        <p>A forex course built around points of interest and order blocks — for traders focused on currency markets.</p>
+        <div class="price-row"><span class="was">$650</span><span class="now">$90</span><span class="per">one-time</span><span class="save">SAVE 86%</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Botos Academy — BTA Premium</h3><span class="badge life">Options</span></div>
+        <span class="creator">Creator: Erik Botos</span>
+        <p>Options and SPY trading: strategy videos, a get-started path, and futures explained in plain terms.</p>
+        <div class="price-row"><span class="now">Open a ticket</span><span class="per">price confirmed in Discord</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Traders Caffe Mentorship</h3><span class="badge life">Mentorship</span></div>
+        <span class="creator">Traders Caffe</span>
+        <p>A mentorship-style programme for traders who want structure and accountability around their learning.</p>
+        <div class="price-row"><span class="now">$75</span><span class="per">Vault price</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Trading Floor — Lifetime Course</h3><span class="badge life">Lifetime</span></div>
+        <span class="creator">The Trading Floor</span>
+        <p>The Trading Floor lifetime course access. Ros is re-adding access — line-up confirmed in #course-catalogue before you pay.</p>
+        <div class="price-row"><span class="was">$2,500</span><span class="now">$90</span><span class="per">one-time</span><span class="save">SAVE 96%</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Trading Floor — Discord Lifetime</h3><span class="badge life">Lifetime</span></div>
+        <span class="creator">The Trading Floor</span>
+        <p>Lifetime Discord access for The Trading Floor community, alongside the lifetime course.</p>
+        <div class="price-row"><span class="was">$999</span><span class="now">$90</span><span class="per">one-time</span><span class="save">SAVE 91%</span></div>
+      </article>
+
+      <article class="course" data-kind="monthly">
+        <div class="c-top"><h3>Trading Floor — VIP</h3><span class="badge mo">Monthly</span></div>
+        <span class="creator">The Trading Floor</span>
+        <p>Monthly VIP access to The Trading Floor — also part of the Monthly Trader Bundle below.</p>
+        <div class="price-row"><span class="was">$99/mo</span><span class="now">$15</span><span class="per">/month</span><span class="save">SAVE 85%</span></div>
+      </article>
+
+      <article class="course" data-kind="monthly">
+        <div class="c-top"><h3>5P Academy Masterclass</h3><span class="badge mo">Weekly</span></div>
+        <span class="creator">5P Academy</span>
+        <p>Masterclass access from 5P Academy for traders building a structured process week by week.</p>
+        <div class="price-row"><span class="was">€25/wk</span><span class="now">€5</span><span class="per">/week</span><span class="save">SAVE 80%</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Select Trading — V2 Mentorship</h3><span class="badge life">Mentorship</span></div>
+        <span class="creator">Select Trading</span>
+        <p>V2 Mentorship from Select Trading. Original price wasn't shown in Whop, so we don't guess it.</p>
+        <div class="price-row"><span class="now">Open a ticket</span><span class="per">price confirmed in Discord</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Fabervaale — Q4 Live Charting Room</h3><span class="badge life">Live Room</span></div>
+        <span class="creator">Fabervaale</span>
+        <p>Q4 Live Charting Room access. Original price wasn't shown in Whop, so we don't guess it.</p>
+        <div class="price-row"><span class="now">Open a ticket</span><span class="per">price confirmed in Discord</span></div>
+      </article>
+
+      <article class="course" data-kind="monthly">
+        <div class="c-top"><h3>TradeProElite — VIP Trader Access</h3><span class="badge mo">Monthly</span></div>
+        <span class="creator">TradeProElite</span>
+        <p>VIP Trader Access from TradeProElite for active traders who want the premium tier.</p>
+        <div class="price-row"><span class="was">$189/mo</span><span class="now">$30</span><span class="per">/month</span><span class="save">SAVE 84%</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Section 8 Rentals</h3><span class="badge life">Real Estate</span></div>
+        <span class="creator">TradeProElite · Real Estate</span>
+        <p>Section 8 rentals education — real estate, listed separately from the trading courses.</p>
+        <div class="price-row"><span class="now">Open a ticket</span><span class="per">price confirmed in Discord</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>AI Growth Lab — Consulting Call</h3><span class="badge life">One-time</span></div>
+        <span class="creator">AI Growth Lab</span>
+        <p>1:1 Viral Strategy consulting call from AI Growth Lab. AI/content — listed separately from trading.</p>
+        <div class="price-row"><span class="was">$700</span><span class="now">$90</span><span class="per">one-time</span><span class="save">SAVE 87%</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>DAX Performance Trading</h3><span class="badge life">Mentorship</span></div>
+        <span class="creator">DAX Performance Trading</span>
+        <p>Trading Mentorship from DAX Performance Trading. Original price wasn't shown in Whop, so we don't guess it.</p>
+        <div class="price-row"><span class="now">Open a ticket</span><span class="per">price confirmed in Discord</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Trade Dojo — Ronin Group Mentorship</h3><span class="badge life">Mentorship</span></div>
+        <span class="creator">Trade Dojo</span>
+        <p>Ronin Group Mentorship from Trade Dojo. Original price wasn't shown in Whop, so we don't guess it.</p>
+        <div class="price-row"><span class="now">Open a ticket</span><span class="per">price confirmed in Discord</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>JeronTrades — Group Mentorship</h3><span class="badge life">Mentorship</span></div>
+        <span class="creator">JeronTrades</span>
+        <p>Group Mentorship from JeronTrades. Original price wasn't shown in Whop, so we don't guess it.</p>
+        <div class="price-row"><span class="now">Open a ticket</span><span class="per">price confirmed in Discord</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Crypto Archie — Big Bundle</h3><span class="badge life">Crypto</span></div>
+        <span class="creator">Crypto Archie</span>
+        <p>Big Bundle from Crypto Archie — crypto-focused education. Original price wasn't shown in Whop, so we don't guess it.</p>
+        <div class="price-row"><span class="now">Open a ticket</span><span class="per">price confirmed in Discord</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Investing Section 8 — Launchpad</h3><span class="badge life">One-time</span></div>
+        <span class="creator">Investing Section 8 · Real Estate</span>
+        <p>Launchpad from Investing Section 8 — real-estate investing education, listed separately from trading.</p>
+        <div class="price-row"><span class="was">$500</span><span class="now">$75</span><span class="per">one-time</span><span class="save">SAVE 85%</span></div>
+      </article>
+
+      <article class="course" data-kind="monthly">
+        <div class="c-top"><h3>Deals &amp; Dollars Academy</h3><span class="badge mo">Monthly</span></div>
+        <span class="creator">Deals &amp; Dollars Academy</span>
+        <p>The 8-Figure Masterclass from Deals &amp; Dollars Academy.</p>
+        <div class="price-row"><span class="was">$1,000/mo</span><span class="now">$90</span><span class="per">/month</span><span class="save">SAVE 91%</span></div>
+      </article>
+
+      <article class="course" data-kind="monthly">
+        <div class="c-top"><h3>ZTRADEZ — Diamond</h3><span class="badge mo">Yearly</span></div>
+        <span class="creator">ZTRADEZ</span>
+        <p>Diamond yearly access from ZTRADEZ, alongside Full Access monthly.</p>
+        <div class="price-row"><span class="was">$599/yr</span><span class="now">$90</span><span class="per">/year</span><span class="save">SAVE 85%</span></div>
+      </article>
+
+      <article class="course" data-kind="monthly">
+        <div class="c-top"><h3>SuperLuckeee — Premium Access</h3><span class="badge mo">Monthly</span></div>
+        <span class="creator">SuperLuckeee · Creator: Andrew</span>
+        <p>Premium tier above General Access — for traders who want the higher SuperLuckeee tier.</p>
+        <div class="price-row"><span class="was">$195/mo</span><span class="now">$30</span><span class="per">/month</span><span class="save">SAVE 85%</span></div>
+      </article>
+
+      <article class="course" data-kind="lifetime">
+        <div class="c-top"><h3>Botos Academy — Mentorship</h3><span class="badge life">Mentorship</span></div>
+        <span class="creator">Creator: Erik Botos</span>
+        <p>Mentorship Programme from Botos Trading Academy, separate from BTA Premium above.</p>
+        <div class="price-row"><span class="was">$5,000</span><span class="now">$90</span><span class="per">one-time</span><span class="save">SAVE 98%</span></div>
+      </article>
+    </div>
+
+    <p style="margin-top:22px;color:var(--ink-2);font-size:15px">That's every sellable course in the Vault on this page — trading, crypto, real estate and AI listed separately where they aren't trading. The live line-up and final price before you pay are always confirmed in <a href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">#course-catalogue in Discord</a>. Where an original price can't be confirmed, we never guess — it's open-a-ticket instead.</p>
+  </div>
+</section>
+
+<!-- ======================= BUNDLE ======================= -->
+<section id="bundle">
+  <div class="wrap">
+    <div class="bundle-band">
+      <div class="bundle-cols">
+        <div>
+          <h2>Beginner Lifetime Bundle</h2>
+          <p class="lead">The fastest way in: three lifetime courses for one payment, in their own private channels, with new lesson breakdowns posted daily. Buy the singles and you'd pay $270 — the bundle is $199.</p>
+          <ul class="bundle-includes">
+            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>FVGC Premium</b> — Capital Complex (orig. $749)</span><span class="li-price">$90</span></li>
+            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>MoneyMotive A+ Lifetime</b> — written A+ guides (orig. $1,999)</span><span class="li-price">$90</span></li>
+            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>Trading Floor Lifetime Course</b> — The Trading Floor (orig. $2,500) — Ros is re-adding access, line-up confirmed in #course-catalogue before you pay</span><span class="li-price">$90</span></li>
+            <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>Private buyer channels</b> for each course + daily lesson posts</span><span class="li-price">Included</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <span class="pc-label">One payment · Yours to learn from</span>
+          <div class="pc-price"><b>$199</b><s>$270</s></div>
+          <p class="pc-sub">One-time. No subscription. You save $71 versus buying the three courses separately in the Vault — and thousands versus the original prices.</p>
+          <a class="btn btn-discord" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">Get the bundle in Discord</a>
+          <div class="pc-rows">
+            <div><span>Singles total in the Vault</span><b>$270</b></div>
+            <div><span>Bundle price</span><b>$199</b></div>
+            <div><span>You save</span><b>$71</b></div>
+            <div><span>How to buy</span><b>Ticket in #open-ticket</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mini-plans">
+      <article class="mini-plan">
+        <h3>Monthly Trader Bundle</h3>
+        <div class="mp-price">$45<span> /month</span></div>
+        <p>FVGC Ultimate ($15) + Trading Floor VIP ($15) + ZTRADEZ Full Access ($10) + SuperLuckeee General ($20) — singles total $60/month, bundled at $45/month. You save $15/month, with one payment and one set of private channels.</p>
+      </article>
+      <article class="mini-plan">
+        <h3>Vault memberships</h3>
+        <div class="mp-price">$29–$59<span> /month</span></div>
+        <p><b>Vault Starter $29/month</b> and <b>Vault Plus $59/month</b> — membership access runs while your subscription is active, and Plus unlocks the premium lounge. Full plan details are in #membership-plans in the Discord.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= HOW IT WORKS ======================= -->
+<section class="alt" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How it works</h2>
+      <p>Four steps, about five minutes. You never pay before you've seen the free material and the exact catalogue.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="snum">1</span><h3>Join free</h3><p>Click any join button and enter the Discord. No card, no commitment — you're a Free Member straight away.</p></div>
+      <div class="step"><span class="snum">2</span><h3>Learn first</h3><p>Watch the free FVG lesson in #free-videos and download the 4 guides from #free-resources. Judge the quality yourself.</p></div>
+      <div class="step"><span class="snum">3</span><h3>Pick &amp; open a ticket</h3><p>Choose a course, a bundle or a membership in #course-catalogue, then open a ticket in #open-ticket. The team confirms the current line-up and price with you first.</p></div>
+      <div class="step"><span class="snum">4</span><h3>Get your access</h3><p>After payment, your private course channels unlock. New lesson breakdowns land there daily. Access problems? Same ticket system, dedicated category.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2>Straight answers</h2>
+      <p>The questions everyone asks before joining — answered the same way we answer them in the server.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is this authorised, or pirated content?<span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 9 7 7 7-7"/></svg></span></summary>
+        <div class="a"><p>Authorised. RC Trading Vault resells these courses with permission confirmed from the original sellers, and free sample lessons are shared with the creators' permission too — which is why courses and creators are always named and credited, never hidden.</p></div>
+      </details>
+      <details>
+        <summary>Why is it so much cheaper than the original price?<span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 9 7 7 7-7"/></svg></span></summary>
+        <div class="a"><p>Our pricing rule is public: Vault price ≈ 15% of the original, rounded to a fair number, and capped at $90 maximum. FVGC Premium is $749 from Capital Complex — it's $90 here. Same course, Vault price.</p></div>
+      </details>
+      <details>
+        <summary>What do I get for free, exactly?<span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 9 7 7 7-7"/></svg></span></summary>
+        <div class="a"><p>A full sample FVG lesson from FVGC Premium (on YouTube and in #free-videos), the 4 beginner guides in #free-resources, daily free market posts, and access to the public channels — including the full priced catalogue, so you can compare before spending anything.</p></div>
+      </details>
+      <details>
+        <summary>How do I actually buy, and how do I get access?<span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 9 7 7 7-7"/></svg></span></summary>
+        <div class="a"><p>Join the Discord, check #course-catalogue, then open a ticket in #open-ticket. The team confirms what you're buying and the exact price, takes payment, and unlocks the private channels for your courses. Paid access is granted after verified payment — never on a claim alone.</p></div>
+      </details>
+      <details>
+        <summary>Is membership access lifetime?<span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 9 7 7 7-7"/></svg></span></summary>
+        <div class="a"><p>It depends what you buy, and we'll always say which: one-time and "lifetime" courses are a single payment; memberships (Starter, Plus, monthly courses) run while your subscription is active. Nothing is dressed up as lifetime when it isn't.</p></div>
+      </details>
+      <details>
+        <summary>Will this make me profitable?<span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 9 7 7 7-7"/></svg></span></summary>
+        <div class="a"><p>Nobody honest can promise that, and we don't. This is trading education — concepts, chart reading, risk and process. What you do with it, and your results, are yours. Anyone guaranteeing returns is lying to you.</p></div>
+      </details>
+      <details>
+        <summary>What if something goes wrong — access, payment, refunds?<span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 9 7 7 7-7"/></svg></span></summary>
+        <div class="a"><p>Open a ticket. Support runs on six categories — course purchases, membership enquiries, payment assistance, access problems, general support, and refund &amp; cancellation enquiries — so your issue lands with the right process from the start.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FINAL CTA ======================= -->
+<section class="final">
+  <div class="wrap">
+    <h2>Learn one real lesson today. Free.</h2>
+    <p>Join the Discord, watch the FVG lesson, read the guides. If the teaching is for you, the whole catalogue is waiting at Vault prices. If it isn't, you've spent nothing.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-discord" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">Join RC Trading Vault — Free</a>
+      <a class="btn btn-hero-ghost" href="https://www.youtube.com/@rctradingvault" target="_blank" rel="noopener" data-track="youtube">Watch on YouTube</a>
+    </div>
+    <p class="hero-note" style="margin-top:18px">Also find us on Instagram &amp; Threads: <b style="color:#cfe4ff">@roscamerontrade</b></p>
+  </div>
+</section>
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <a class="brand" href="#top" aria-label="RC Trading Vault — back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20V9l8-5 8 5v11" stroke="#2e9bff" stroke-width="2" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+        </span>
+        <span>
+          <span class="brand-name">RC TRADING <span>VAULT</span></span><br />
+          <span class="brand-sub">Trading Education</span>
+        </span>
+      </a>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#free-lesson">Free Lesson</a>
+        <a href="#courses">Courses</a>
+        <a href="#bundle">Bundle — $199</a>
+        <a href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">Discord</a>
+        <a href="https://www.youtube.com/@rctradingvault" target="_blank" rel="noopener" data-track="youtube">YouTube</a>
+        <a href="https://www.instagram.com/roscamerontrade" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+    <div class="disclaimer">
+      <strong>Education only</strong> — market analysis for learning, not personal financial advice. Do your own research. No guaranteed returns. Trading involves substantial risk of loss; never trade with money you cannot afford to lose. RC Trading Vault resells course access with permission confirmed from the original sellers; course creators are credited for their material. Prices shown are Vault prices at the time of publishing — the live catalogue in Discord is the final word before you pay.
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn-discord" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">Join Discord — Get the Free Lesson</a>
+</div>
+
+<div class="copied-toast" id="toast" role="status" aria-live="polite">Discord invite link copied</div>
+
+<script>
+  // Conversion hook: forwards to Meta Pixel (fbq, ID 1334543985442173, installed in <head>).
+  // Discord clicks fire 'Lead', YouTube clicks fire 'ViewContent'. Keeps a local log too.
+  window.rcTrack = function (eventName) {
+    try {
+      if (typeof window.fbq === 'function') { window.fbq('track', eventName); }
+      (window.rcEvents = window.rcEvents || []).push({ event: eventName, at: new Date().toISOString() });
+    } catch (e) { /* tracking must never break the page */ }
+  };
+
+  document.querySelectorAll('[data-track]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      window.rcTrack(el.getAttribute('data-track') === 'discord' ? 'Lead' : 'ViewContent');
+    });
+  });
+
+  // Duplicate ticker content so the marquee loops seamlessly.
+  (function () {
+    var track = document.getElementById('tickerTrack');
+    if (track) { track.innerHTML += track.innerHTML; }
+  })();
+
+  // Course filters.
+  (function () {
+    var buttons = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('#courseGrid .course');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+        btn.setAttribute('aria-pressed', 'true');
+        var f = btn.getAttribute('data-filter');
+        cards.forEach(function (card) {
+          card.hidden = !(f === 'all' || card.getAttribute('data-kind') === f);
+        });
+      });
+    });
+  })();
+
+  // Copy the Discord invite link.
+  (function () {
+    var btn = document.getElementById('copyLinkBtn');
+    var toast = document.getElementById('toast');
+    if (!btn) { return; }
+    btn.addEventListener('click', function () {
+      var link = 'https://discord.gg/c9pCw5DcuH';
+      function done() {
+        toast.classList.add('show');
+        btn.textContent = 'Copied — see you inside';
+        setTimeout(function () {
+          toast.classList.remove('show');
+          btn.textContent = 'Copy Discord invite link';
+        }, 2600);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(done, function () { fallback(); });
+      } else { fallback(); }
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = link; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (e) { /* ignore */ }
+        document.body.removeChild(ta); done();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
