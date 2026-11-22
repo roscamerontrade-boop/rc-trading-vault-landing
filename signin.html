@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="dark" />
+<meta name="description" content="Sign in to your RC Trading Vault account to open the course platform — 177 trading, crypto, real estate and AI courses in one place." />
+<link rel="icon" href="data:," />
+<title>Sign in — RC Trading Vault</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="auth.js"></script>
+<script>if (window.RCVAuth) RCVAuth.redirectIfSignedIn();</script>
+
+<style>
+  :root{
+    --bg:#04060b;
+    --surface:#0a0f1a;
+    --surface-2:#0d1422;
+    --ink:#eef4ff;
+    --ink-2:#a9bedd;
+    --ink-3:#7186ab;
+    --line:#1b2740;
+    --blue:#2e9bff;
+    --blue-bright:#38b6ff;
+    --blue-deep:#2e9bff;
+    --blue-soft:rgba(46,155,255,.12);
+    --red:#ff6b6b;
+    --radius:14px;
+    --font-body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --font-display:"Archivo","Manrope",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--font-body);font-size:16.5px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;min-height:100vh;
+    display:flex;flex-direction:column;
+  }
+  a{color:var(--blue-bright)}
+  :focus-visible{outline:3px solid var(--blue-bright);outline-offset:2px;border-radius:6px}
+  .auth-wrap{flex:1;width:100%;max-width:440px;margin:0 auto;padding:28px 20px 40px;display:flex;flex-direction:column}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);margin:8px auto 34px}
+  .brand-mark{width:38px;height:38px;border-radius:9px;background:#04060b;display:grid;place-items:center;border:1px solid #1b2740;flex-shrink:0}
+  .brand-name{font-family:var(--font-display);font-weight:900;font-size:17px;letter-spacing:.02em;line-height:1.05}
+  .brand-name span{color:var(--blue-bright)}
+  .brand-sub{font-size:10.5px;font-weight:700;letter-spacing:.22em;color:var(--ink-3);text-transform:uppercase}
+  .auth-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px}
+  .auth-card h1{font-family:var(--font-display);font-weight:800;font-size:27px;line-height:1.15;margin:0 0 6px}
+  .auth-sub{color:var(--ink-2);margin:0 0 22px;font-size:15.5px}
+  .auth-error{
+    background:rgba(255,107,107,.12);border:1px solid rgba(255,107,107,.45);color:#ffb3b3;
+    border-radius:10px;padding:11px 14px;margin:0 0 18px;font-size:14.5px;font-weight:600;
+  }
+  form{display:grid;gap:16px}
+  label{display:grid;gap:7px;font-weight:700;font-size:14px;color:var(--ink-2)}
+  input{
+    width:100%;min-height:48px;padding:11px 14px;border-radius:10px;
+    border:1.5px solid var(--line);background:var(--surface-2);color:var(--ink);
+    font-family:var(--font-body);font-size:15.5px;
+  }
+  input:focus{border-color:var(--blue-bright);outline:none}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    min-height:50px;padding:12px 22px;border-radius:10px;border:0;cursor:pointer;
+    font-family:var(--font-body);font-weight:800;font-size:15.5px;text-decoration:none;
+    background:var(--blue);color:#fff;width:100%;
+  }
+  .btn:hover{background:var(--blue-bright)}
+  .btn:active{transform:translateY(1px)}
+  .auth-switch{text-align:center;color:var(--ink-2);font-size:15px;margin:20px 0 0}
+  .auth-note{text-align:center;color:var(--ink-3);font-size:13px;margin:16px 0 0}
+  .auth-footer{
+    max-width:440px;margin:0 auto;padding:0 20px 28px;text-align:center;
+    color:var(--ink-3);font-size:13px;line-height:1.55;
+  }
+  .auth-footer strong{color:var(--ink-2)}
+  @media (max-width:480px){ .auth-card{padding:24px 20px} }
+</style>
+</head>
+<body>
+  <main class="auth-wrap">
+    <a class="brand" href="index.html" aria-label="RC Trading Vault — back to the home page">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20V9l8-5 8 5v11" stroke="#2e9bff" stroke-width="2" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+      </span>
+      <span>
+        <span class="brand-name">RC TRADING <span>VAULT</span></span><br />
+        <span class="brand-sub">Course Platform</span>
+      </span>
+    </a>
+
+    <div class="auth-card">
+      <h1>Welcome back</h1>
+      <p class="auth-sub">Sign in to your Vault account to open the course platform.</p>
+      <div class="auth-error" id="authError" role="alert" hidden></div>
+      <form id="signinForm" novalidate>
+        <label for="email">Email
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+        </label>
+        <label for="password">Password
+          <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="Your password" />
+        </label>
+        <button class="btn" type="submit">Sign in</button>
+      </form>
+      <p class="auth-switch">No account yet? <a href="signup.html">Create one — free</a></p>
+      <p class="auth-note">Accounts are saved in this browser for now — cloud accounts coming soon.</p>
+    </div>
+  </main>
+
+  <footer class="auth-footer">
+    <strong>Education only</strong> — market analysis for learning, not personal financial advice. Do your own research. No guaranteed returns.
+  </footer>
+
+  <script>
+    document.getElementById("signinForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var res = window.RCVAuth
+        ? RCVAuth.signIn(email, password)
+        : { ok: false, error: "Something went wrong loading the sign-in form — please reload the page and try again." };
+      if (res.ok) {
+        window.location.replace("app.html");
+      } else {
+        var box = document.getElementById("authError");
+        box.textContent = res.error;
+        box.hidden = false;
+      }
+    });
+  </script>
+</body>
+</html>

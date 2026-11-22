@@ -8,6 +8,11 @@
 <link rel="icon" href="data:," />
 <title>RC Trading Vault — Course Platform</title>
 
+<!-- Auth gate: members only. Signed-out visitors are sent to signin.html
+     before any app content renders. -->
+<script src="auth.js"></script>
+<script>if (window.RCVAuth) RCVAuth.requireAuth();</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -120,6 +125,12 @@
     .brand-sub{display:none}
     .topbar .btn{min-height:44px;padding:9px 13px;font-size:13.5px}
   }
+
+  /* ---------- signed-in member ---------- */
+  .member-chip{display:flex;flex-direction:column;align-items:flex-end;line-height:1.25;min-width:0}
+  .member-name{font-weight:800;font-size:14px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px}
+  .member-email{font-size:11.5px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px}
+  @media (max-width:640px){ .member-email{display:none} .member-name{max-width:110px} }
 
   /* ---------- hero strip ---------- */
   .hero{background:var(--dark-bg);color:var(--dark-ink);position:relative;overflow:hidden}
@@ -502,6 +513,11 @@
       <a href="#community">Community</a>
       <a href="#plans">Plans</a>
     </nav>
+    <span class="member-chip" id="memberChip" hidden>
+      <span class="member-name" id="memberName"></span>
+      <span class="member-email" id="memberEmail"></span>
+    </span>
+    <button class="btn btn-ghost btn-sm" id="signOutBtn" type="button">Sign out</button>
     <a class="btn btn-discord btn-sm" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener">Join Discord — Free</a>
   </div>
 </header>
@@ -1615,6 +1631,7 @@ renderCommFilters();
 renderFeed();
 renderMlFilters();
 renderMlGrid();
+if (window.RCVAuth) RCVAuth.initHeader();
 </script>
 </body>
 </html>
