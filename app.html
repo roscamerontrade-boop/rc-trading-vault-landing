@@ -469,7 +469,7 @@
   .post p{margin:0;color:var(--ink-2);font-size:15px}
   .post .p-when{font-size:12.5px;color:var(--ink-3);font-weight:700;margin-top:9px}
 
-  /* ---------- monsterlabs library ---------- */
+  /* ---------- extended library ---------- */
   .ml-card{
     background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
     padding:20px 22px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);
@@ -498,7 +498,7 @@
     <nav class="topnav" aria-label="Page sections">
       <a href="#library">Library</a>
       <a href="#dashboard">My Courses</a>
-      <a href="#monsterlabs">MonsterLabs</a>
+      <a href="#extended-library">Extended library</a>
       <a href="#community">Community</a>
       <a href="#plans">Plans</a>
     </nav>
@@ -614,29 +614,29 @@
   </div>
 </section>
 
-<!-- ======================= MONSTERLABS LIBRARY ======================= -->
-<section class="alt" id="monsterlabs">
+<!-- ======================= EXTENDED LIBRARY ======================= -->
+<section class="alt" id="extended-library">
   <div class="wrap">
     <div class="sec-head">
-      <h2>MonsterLabs Library — 158 courses</h2>
-      <p>The full MonsterLabs catalogue, now part of the Vault. Vault pricing for these courses isn't set yet, so every one is open-a-ticket — we never guess a price. Seven courses in this catalogue (including 393 Premium, FVGC / Capital Complex, Crypto Archie, Inter Equity Trading, JeronTrades, Select Trading and Trade Dojo) already sit in the Vault library above, so they're listed once, there. The catalogue counts 158 courses; 157 names were captured and 150 are listed below.</p>
+      <h2>Extended library — 150 courses</h2>
+      <p>150 more courses in the extended library, now part of the Vault. Vault pricing for these courses isn't set yet, so every one is open-a-ticket — we never guess a price. Seven courses in this library (including 393 Premium, FVGC / Capital Complex, Crypto Archie, Inter Equity Trading, JeronTrades, Select Trading and Trade Dojo) already sit in the Vault library above, so they're listed once, there.</p>
     </div>
 
     <div class="lib-controls">
       <div class="search-box">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
-        <input type="search" id="mlSearchInput" placeholder="Search MonsterLabs courses…" aria-label="Search MonsterLabs courses" />
+        <input type="search" id="mlSearchInput" placeholder="Search extended-library courses…" aria-label="Search extended-library courses" />
       </div>
       <div class="sort-box">
         <label for="mlSortSelect">Sort</label>
-        <select id="mlSortSelect" aria-label="Sort MonsterLabs courses">
+        <select id="mlSortSelect" aria-label="Sort extended-library courses">
           <option value="az">Name A–Z</option>
           <option value="lessons">Most lessons</option>
         </select>
       </div>
     </div>
 
-    <div class="cat-filters" id="mlCatFilters" role="group" aria-label="Filter MonsterLabs courses by category"></div>
+    <div class="cat-filters" id="mlCatFilters" role="group" aria-label="Filter extended-library courses by category"></div>
     <p class="result-count" id="mlResultCount" role="status" aria-live="polite"></p>
 
     <div class="courses" id="mlGrid"></div>
@@ -794,7 +794,7 @@
       <nav class="foot-links" aria-label="Footer">
         <a href="#library">Library</a>
         <a href="#dashboard">My Courses</a>
-        <a href="#monsterlabs">MonsterLabs</a>
+        <a href="#extended-library">Extended library</a>
         <a href="#community">Community</a>
         <a href="#plans">Plans</a>
         <a href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener">Discord</a>
@@ -1497,8 +1497,8 @@ document.getElementById("postForm").addEventListener("submit", function(e){
 });
 
 /* =====================================================================
-   MONSTERLABS LIBRARY — names, categories and lesson counts captured
-   from the public catalogue (2026-11-22). Vault pricing is not set for
+   EXTENDED LIBRARY — names, categories and lesson counts.
+   Vault pricing is not set for
    these courses, so every card is "Open a ticket". The 7 courses that
    overlap with the Vault library are listed once, in the Vault library.
    ===================================================================== */
@@ -1596,7 +1596,7 @@ function renderMlGrid(){
     card.innerHTML =
       '<span class="c-top" style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px"><h3>' + esc(c.n) + '</h3>' +
       (c.c !== "—" ? '<span class="badge cat">' + esc(c.c) + '</span>' : '') + '</span>' +
-      '<span class="ml-meta">' + c.l + (c.l === 1 ? ' lesson' : ' lessons') + ' · MonsterLabs Library</span>' +
+      '<span class="ml-meta">' + c.l + (c.l === 1 ? ' lesson' : ' lessons') + ' · Extended library</span>' +
       '<span class="price-row"><span class="ticket">Open a ticket</span><span class="per">Vault price not set yet — confirmed in Discord</span></span>';
     mlGrid.appendChild(card);
   });
