@@ -405,6 +405,48 @@ src="https://www.facebook.com/tr?id=1334543985442173&ev=PageView&noscript=1"
     padding:11px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:70;
   }
   .copied-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* platform + free course */
+  .platform-cols{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  @media (max-width:920px){ .platform-cols{grid-template-columns:1fr} }
+  .platform-shot{
+    border:2px dashed var(--line);border-radius:16px;background:var(--surface-2);
+    aspect-ratio:16/10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+    text-align:center;padding:24px;color:var(--ink-3);
+  }
+  .platform-shot b{color:var(--ink);font-family:var(--font-display);font-size:17px}
+  .platform-shot span{font-size:14px;max-width:26em}
+  .platform-feats{list-style:none;margin:22px 0;display:grid;gap:12px;padding:0}
+  .platform-feats li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-2);font-size:16px}
+  .platform-feats li b{color:var(--ink)}
+  .free-band{
+    background:var(--hero-bg);color:var(--hero-ink);border-radius:22px;padding:40px;
+    display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;
+  }
+  @media (max-width:640px){ .free-band{padding:28px 22px} }
+  .free-band h2{color:#fff;margin:0 0 8px}
+  .free-band p{color:var(--hero-ink-2);margin:0;max-width:34em}
+  .free-band .btn{flex-shrink:0}
+  .name-search{
+    display:flex;align-items:center;gap:10px;
+    background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:0 14px;min-height:48px;
+    max-width:520px;
+  }
+  .name-search svg{flex-shrink:0;color:var(--ink-3)}
+  .name-search input{
+    border:0;outline:0;background:transparent;color:var(--ink);
+    font-family:var(--font-body);font-size:15.5px;font-weight:600;width:100%;min-height:46px;
+  }
+  .name-search input::placeholder{color:var(--ink-3)}
+  .name-group{font-family:var(--font-display);font-size:19px;font-weight:800;margin:28px 0 12px}
+  .name-grid{display:flex;flex-wrap:wrap;gap:8px}
+  .name-chip{
+    display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);
+    border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700;color:var(--ink);
+  }
+  .name-chip i{font-style:normal;font-family:var(--font-mono);font-size:11px;color:var(--ink-3);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+  .name-chip[hidden]{display:none}
+  .name-note{margin-top:20px;color:var(--ink-3);font-size:13.5px}
 </style>
 </head>
 <body>
@@ -424,6 +466,8 @@ src="https://www.facebook.com/tr?id=1334543985442173&ev=PageView&noscript=1"
     <nav class="topnav" aria-label="Page sections">
       <a href="#free-lesson">Free Lesson</a>
       <a href="#inside">Inside the Vault</a>
+      <a href="#platform">Platform</a>
+      <a href="#all-courses">All courses</a>
       <a href="#courses">Courses</a>
       <a href="#bundle">Bundle</a>
       <a href="#faq">FAQ</a>
@@ -450,8 +494,12 @@ src="https://www.facebook.com/tr?id=1334543985442173&ev=PageView&noscript=1"
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg>
             Watch the free FVG lesson
           </a>
+          <a class="btn btn-hero-ghost" href="app.html">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+            Explore the course platform
+          </a>
         </div>
-        <p class="hero-note">Free members get the lesson, the guides and daily market posts. Paid courses unlock private channels — only for buyers of that course.</p>
+        <p class="hero-note">Free side lives in Discord — the free lesson, the 4 guides and one full course free. The paid side lives in the course platform — the full list of all courses, watch the lessons and track your progress. Paid courses unlock private channels — only for buyers of that course.</p>
         <div class="hero-stats">
           <div class="hero-stat"><b>20+</b><span>premium courses in the catalogue</span></div>
           <div class="hero-stat"><b>$90 max</b><span>every Vault price is capped at $90</span></div>
@@ -610,6 +658,19 @@ src="https://www.facebook.com/tr?id=1334543985442173&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- ======================= ONE FULL COURSE FREE ======================= -->
+<section class="tight" style="padding-top:0">
+  <div class="wrap">
+    <div class="free-band">
+      <div>
+        <h2>One full course, free.</h2>
+        <p>Join the Discord and get one full course free — on top of the free FVG lesson and the 4 beginner guides. The first free course drops soon in Discord; members hear about it first. No card, no catch — learn first, pay only if you want more.</p>
+      </div>
+      <a class="btn btn-discord" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">Claim it in Discord — Free</a>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= INSIDE THE VAULT ======================= -->
 <section id="inside">
   <div class="wrap">
@@ -661,6 +722,35 @@ src="https://www.facebook.com/tr?id=1334543985442173&ev=PageView&noscript=1"
           </div>
         </div>
         <a class="btn btn-discord" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord" style="align-self:flex-start">See it yourself — join free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= COURSE PLATFORM ======================= -->
+<section class="alt" id="platform">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The course platform</h2>
+      <p>Every Vault course in one place — not scattered across channels. Open the platform, find your course, watch the lessons and track your progress.</p>
+    </div>
+    <div class="platform-cols">
+      <div>
+        <ul class="platform-feats">
+          <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>All Vault courses in one library</b> — search it, filter by category, sort by price or saving.</span></li>
+          <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>Watch the lessons in order</b> — each course opens its own lesson list, with the video right there.</span></li>
+          <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>Track your progress</b> — mark lessons done and pick up where you left off.</span></li>
+          <li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span><span><b>Discord is where it starts</b> — sign in through Discord, get your access in a ticket, then learn in the platform.</span></li>
+        </ul>
+        <div class="hero-ctas" style="justify-content:flex-start">
+          <a class="btn btn-discord" href="app.html">Open the course platform</a>
+          <a class="btn btn-ghost" href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">Join Discord — Free</a>
+        </div>
+      </div>
+      <div class="platform-shot" role="img" aria-label="Platform preview — screenshot coming soon">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+        <b>Platform preview — screenshot coming soon</b>
+        <span>A real screenshot of the course library will appear here.</span>
       </div>
     </div>
   </div>
@@ -875,6 +965,205 @@ src="https://www.facebook.com/tr?id=1334543985442173&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- ======================= ALL COURSES ======================= -->
+<section id="all-courses">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>All courses — every name in the Vault</h2>
+      <p>Every course name in the library, in one place. The 27 Vault courses are in the catalogue above; the MonsterLabs library adds 150 more names. Prices for MonsterLabs courses are not set yet — open a ticket in Discord to ask. Search the list below.</p>
+    </div>
+    <label class="name-search" for="allCoursesSearch">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="allCoursesSearch" type="search" placeholder="Search all course names…" autocomplete="off" />
+    </label>
+    <p class="count-line" id="allCoursesCount"></p>
+    <h3 class="name-group">Vault library — 27 courses</h3>
+    <div class="name-grid">
+      <span class="name-chip" data-name="fvgc premium trading">FVGC Premium <i>Trading</i></span>
+      <span class="name-chip" data-name="moneymotive a+ trading">MoneyMotive A+ <i>Trading</i></span>
+      <span class="name-chip" data-name="andrew&#x27;s bootcamp trading">Andrew&#x27;s Bootcamp <i>Trading</i></span>
+      <span class="name-chip" data-name="393 premium trading">393 Premium <i>Trading</i></span>
+      <span class="name-chip" data-name="fvgc ultimate trading">FVGC Ultimate <i>Trading</i></span>
+      <span class="name-chip" data-name="ztradez full access trading">ZTRADEZ Full Access <i>Trading</i></span>
+      <span class="name-chip" data-name="inter equity trading forex">Inter Equity Trading <i>Forex</i></span>
+      <span class="name-chip" data-name="botos academy — bta premium options">Botos Academy — BTA Premium <i>Options</i></span>
+      <span class="name-chip" data-name="traders caffe mentorship mentorship">Traders Caffe Mentorship <i>Mentorship</i></span>
+      <span class="name-chip" data-name="trading floor — lifetime course trading">Trading Floor — Lifetime Course <i>Trading</i></span>
+      <span class="name-chip" data-name="trading floor — discord lifetime trading">Trading Floor — Discord Lifetime <i>Trading</i></span>
+      <span class="name-chip" data-name="trading floor — vip trading">Trading Floor — VIP <i>Trading</i></span>
+      <span class="name-chip" data-name="5p academy masterclass forex">5P Academy Masterclass <i>Forex</i></span>
+      <span class="name-chip" data-name="select trading — v2 mentorship mentorship">Select Trading — V2 Mentorship <i>Mentorship</i></span>
+      <span class="name-chip" data-name="fabervaale — q4 live charting room trading">Fabervaale — Q4 Live Charting Room <i>Trading</i></span>
+      <span class="name-chip" data-name="tradeproelite — vip trader access trading">TradeProElite — VIP Trader Access <i>Trading</i></span>
+      <span class="name-chip" data-name="section 8 rentals real estate">Section 8 Rentals <i>Real Estate</i></span>
+      <span class="name-chip" data-name="ai growth lab — consulting call ai">AI Growth Lab — Consulting Call <i>AI</i></span>
+      <span class="name-chip" data-name="dax performance trading mentorship">DAX Performance Trading <i>Mentorship</i></span>
+      <span class="name-chip" data-name="trade dojo — ronin group mentorship mentorship">Trade Dojo — Ronin Group Mentorship <i>Mentorship</i></span>
+      <span class="name-chip" data-name="jerontrades — group mentorship mentorship">JeronTrades — Group Mentorship <i>Mentorship</i></span>
+      <span class="name-chip" data-name="crypto archie — big bundle crypto">Crypto Archie — Big Bundle <i>Crypto</i></span>
+      <span class="name-chip" data-name="investing section 8 — launchpad real estate">Investing Section 8 — Launchpad <i>Real Estate</i></span>
+      <span class="name-chip" data-name="deals &amp; dollars academy real estate">Deals &amp; Dollars Academy <i>Real Estate</i></span>
+      <span class="name-chip" data-name="ztradez — diamond trading">ZTRADEZ — Diamond <i>Trading</i></span>
+      <span class="name-chip" data-name="superluckeee — premium access trading">SuperLuckeee — Premium Access <i>Trading</i></span>
+      <span class="name-chip" data-name="botos academy — mentorship mentorship">Botos Academy — Mentorship <i>Mentorship</i></span>
+    </div>
+    <h3 class="name-group">MonsterLabs library — 150 courses</h3>
+    <div class="name-grid">
+      <span class="name-chip" data-name="618ers ">618ers</span>
+      <span class="name-chip" data-name="ab trades ict">AB Trades <i>ICT</i></span>
+      <span class="name-chip" data-name="ace of trades (akram) ict">Ace Of Trades (Akram) <i>ICT</i></span>
+      <span class="name-chip" data-name="aevo by zyronq ">aevo by ZyroNQ</span>
+      <span class="name-chip" data-name="afyz lathyrus mentorship ict">Afyz Lathyrus Mentorship <i>ICT</i></span>
+      <span class="name-chip" data-name="ag trades inner circle ict">AG Trades Inner Circle <i>ICT</i></span>
+      <span class="name-chip" data-name="akmepaid ">AkmePaid</span>
+      <span class="name-chip" data-name="akon v2 by rah rah ">AKON V2 by Rah Rah</span>
+      <span class="name-chip" data-name="alchemist ict">Alchemist <i>ICT</i></span>
+      <span class="name-chip" data-name="alex imber morning strategy ">Alex Imber Morning Strategy</span>
+      <span class="name-chip" data-name="ali khan mmxm">Ali Khan <i>MMXM</i></span>
+      <span class="name-chip" data-name="amn trading by adeel asghar ict">AMN Trading by Adeel Asghar <i>ICT</i></span>
+      <span class="name-chip" data-name="arctic 2026 lit">Arctic 2026 <i>LIT</i></span>
+      <span class="name-chip" data-name="ashley doubles 1% ">Ashley Doubles 1%</span>
+      <span class="name-chip" data-name="ashley doubles premium ">Ashley Doubles Premium</span>
+      <span class="name-chip" data-name="avals (mind over market) mentorship ict">Avals (Mind Over Market) Mentorship <i>ICT</i></span>
+      <span class="name-chip" data-name="bang lab by ant ">BANG LAB by Ant</span>
+      <span class="name-chip" data-name="baron trades ">Baron Trades</span>
+      <span class="name-chip" data-name="benjamin smc smc">Benjamin SMC <i>SMC</i></span>
+      <span class="name-chip" data-name="blackthorn mentorship by el professor ict">BlackThorn Mentorship by El Professor <i>ICT</i></span>
+      <span class="name-chip" data-name="blessed continuum trading ict">Blessed Continuum Trading <i>ICT</i></span>
+      <span class="name-chip" data-name="brave skool smc">Brave Skool <i>SMC</i></span>
+      <span class="name-chip" data-name="breezi hq lit">Breezi HQ <i>LIT</i></span>
+      <span class="name-chip" data-name="casper smc smc">Casper SMC <i>SMC</i></span>
+      <span class="name-chip" data-name="cloud 9 ict">Cloud 9 <i>ICT</i></span>
+      <span class="name-chip" data-name="cobra trading ict">Cobra Trading <i>ICT</i></span>
+      <span class="name-chip" data-name="dante orderflow">Dante <i>OrderFlow</i></span>
+      <span class="name-chip" data-name="dayes qt">Dayes <i>QT</i></span>
+      <span class="name-chip" data-name="deep charts fabio orderflow">Deep Charts Fabio <i>OrderFlow</i></span>
+      <span class="name-chip" data-name="dodgy ifvg">Dodgy <i>IFVG</i></span>
+      <span class="name-chip" data-name="drewizebanks ict">Drewizebanks <i>ICT</i></span>
+      <span class="name-chip" data-name="dtt ict">DTT <i>ICT</i></span>
+      <span class="name-chip" data-name="dutch 2026 ict">Dutch 2026 <i>ICT</i></span>
+      <span class="name-chip" data-name="emj ">EMJ</span>
+      <span class="name-chip" data-name="equinox traders ">Equinox Traders</span>
+      <span class="name-chip" data-name="ethos ">Ethos</span>
+      <span class="name-chip" data-name="fabio q3/ q4 orderflow">Fabio Q3/ Q4 <i>OrderFlow</i></span>
+      <span class="name-chip" data-name="fearing qt">Fearing <i>QT</i></span>
+      <span class="name-chip" data-name="flexxtradinglab flexxtradinglab">FlexxTradingLab <i>FlexxTradingLab</i></span>
+      <span class="name-chip" data-name="forex 4 noobs ict">Forex 4 Noobs <i>ICT</i></span>
+      <span class="name-chip" data-name="forex cartel ict">Forex Cartel <i>ICT</i></span>
+      <span class="name-chip" data-name="fspfutures ict">fspfutures <i>ICT</i></span>
+      <span class="name-chip" data-name="fx alex g ict">FX ALEX G <i>ICT</i></span>
+      <span class="name-chip" data-name="gainz masterclass orderflow">Gainz Masterclass <i>OrderFlow</i></span>
+      <span class="name-chip" data-name="gerti trader ">Gerti Trader</span>
+      <span class="name-chip" data-name="gs trades ict">GS Trades <i>ICT</i></span>
+      <span class="name-chip" data-name="hunnyu 1-1 lit">Hunnyu 1-1 <i>LIT</i></span>
+      <span class="name-chip" data-name="igloooo lit">Igloooo <i>LIT</i></span>
+      <span class="name-chip" data-name="inthecircle by salman nassiri ict">InTheCircle by salman nassiri <i>ICT</i></span>
+      <span class="name-chip" data-name="ivan trades ict">Ivan Trades <i>ICT</i></span>
+      <span class="name-chip" data-name="jacecap ict">Jacecap <i>ICT</i></span>
+      <span class="name-chip" data-name="jack trades po3">Jack Trades <i>PO3</i></span>
+      <span class="name-chip" data-name="jacob speculates 2025 ">Jacob Speculates 2025</span>
+      <span class="name-chip" data-name="jamez tradez ict">Jamez Tradez <i>ICT</i></span>
+      <span class="name-chip" data-name="jdub trades ">Jdub Trades</span>
+      <span class="name-chip" data-name="jj simon ict">JJ Simon <i>ICT</i></span>
+      <span class="name-chip" data-name="justin westerlein ict">Justin Westerlein <i>ICT</i></span>
+      <span class="name-chip" data-name="k2 ">K2</span>
+      <span class="name-chip" data-name="killlabz orderflow">KillLabz <i>OrderFlow</i></span>
+      <span class="name-chip" data-name="kole&#x27;s mentorship ict">Kole&#x27;s Mentorship <i>ICT</i></span>
+      <span class="name-chip" data-name="kurrow mx ict">Kurrow MX <i>ICT</i></span>
+      <span class="name-chip" data-name="lanto trades ict">Lanto Trades <i>ICT</i></span>
+      <span class="name-chip" data-name="level theory by 1tickvu ict">Level Theory by 1tickvu <i>ICT</i></span>
+      <span class="name-chip" data-name="liquidity trading ict">Liquidity Trading <i>ICT</i></span>
+      <span class="name-chip" data-name="luc tran ict">Luc Tran <i>ICT</i></span>
+      <span class="name-chip" data-name="mental model by mr witness_369 ict">Mental Model by Mr Witness_369 <i>ICT</i></span>
+      <span class="name-chip" data-name="mew the jew snipped ">Mew The Jew Snipped</span>
+      <span class="name-chip" data-name="mgd trades ">MGD Trades</span>
+      <span class="name-chip" data-name="mikey ict">Mikey <i>ICT</i></span>
+      <span class="name-chip" data-name="mmxm ict">MMXM <i>ICT</i></span>
+      <span class="name-chip" data-name="motion network (exclusive) by riley botha ict">Motion Network (Exclusive) by Riley Botha <i>ICT</i></span>
+      <span class="name-chip" data-name="motion network (motion model bootcamp) by riley botha ict">Motion Network (Motion Model Bootcamp) by Riley Botha <i>ICT</i></span>
+      <span class="name-chip" data-name="mr witness 369 ict">Mr Witness 369 <i>ICT</i></span>
+      <span class="name-chip" data-name="mulano elevare (lvr) lvr">Mulano Elevare (LVR) <i>LVR</i></span>
+      <span class="name-chip" data-name="mulano university beginner">Mulano University <i>Beginner</i></span>
+      <span class="name-chip" data-name="mulano/adept mentorship 2026 lit">Mulano/Adept Mentorship 2026 <i>LIT</i></span>
+      <span class="name-chip" data-name="nasdaq ale ict">Nasdaq Ale <i>ICT</i></span>
+      <span class="name-chip" data-name="nial fuller ">Nial Fuller</span>
+      <span class="name-chip" data-name="niche by matteoaab ">NICHE by matteoaab</span>
+      <span class="name-chip" data-name="nq blake ict">NQ Blake <i>ICT</i></span>
+      <span class="name-chip" data-name="nq christian ict">NQ Christian <i>ICT</i></span>
+      <span class="name-chip" data-name="orachi trading ">Orachi Trading</span>
+      <span class="name-chip" data-name="oracle insights qt">Oracle Insights <i>QT</i></span>
+      <span class="name-chip" data-name="oscay trades ict">Oscay Trades <i>ICT</i></span>
+      <span class="name-chip" data-name="patric nill ">Patric Nill</span>
+      <span class="name-chip" data-name="pay2play university ">Pay2play University</span>
+      <span class="name-chip" data-name="peek capital trading ">Peek Capital Trading</span>
+      <span class="name-chip" data-name="pew ict">Pew <i>ICT</i></span>
+      <span class="name-chip" data-name="pizza ict">Pizza <i>ICT</i></span>
+      <span class="name-chip" data-name="pj trades ">PJ Trades</span>
+      <span class="name-chip" data-name="powell dmc ict">Powell DMC <i>ICT</i></span>
+      <span class="name-chip" data-name="powell e7 mastermind ict">Powell E7 Mastermind <i>ICT</i></span>
+      <span class="name-chip" data-name="powell inner circle by powell ict">Powell Inner Circle by Powell <i>ICT</i></span>
+      <span class="name-chip" data-name="profit circle ict">Profit Circle <i>ICT</i></span>
+      <span class="name-chip" data-name="profit play book by luke bianco ">Profit Play Book by Luke Bianco</span>
+      <span class="name-chip" data-name="quanttower orderflow">Quanttower <i>OrderFlow</i></span>
+      <span class="name-chip" data-name="quarter sequence by lethality master ">Quarter Sequence by Lethality Master</span>
+      <span class="name-chip" data-name="raja banks ">Raja Banks</span>
+      <span class="name-chip" data-name="restn&#x27;s acedemy lit">Restn&#x27;s Acedemy <i>LIT</i></span>
+      <span class="name-chip" data-name="romeo ">Romeo</span>
+      <span class="name-chip" data-name="ronin trading academy ict">Ronin Trading Academy <i>ICT</i></span>
+      <span class="name-chip" data-name="royale academy (nq prince) ict">Royale Academy (NQ Prince) <i>ICT</i></span>
+      <span class="name-chip" data-name="samu profits lit">Samu Profits <i>LIT</i></span>
+      <span class="name-chip" data-name="scalp university ict">Scalp University <i>ICT</i></span>
+      <span class="name-chip" data-name="scripted (srs trades) ict">Scripted (Srs Trades) <i>ICT</i></span>
+      <span class="name-chip" data-name="scrivtrades by matthew scriv ict">ScrivTrades by Matthew Scriv <i>ICT</i></span>
+      <span class="name-chip" data-name="sham ">Sham</span>
+      <span class="name-chip" data-name="shinobi by shinobi signals ict">Shinobi by Shinobi Signals <i>ICT</i></span>
+      <span class="name-chip" data-name="smart money cartel (faiz smc) smc">Smart Money Cartel (Faiz SMC) <i>SMC</i></span>
+      <span class="name-chip" data-name="snr ">SNR</span>
+      <span class="name-chip" data-name="soap ">Soap</span>
+      <span class="name-chip" data-name="soupy ">Soupy</span>
+      <span class="name-chip" data-name="strafe unparallels ">Strafe Unparallels</span>
+      <span class="name-chip" data-name="tempo trades ict">Tempo Trades <i>ICT</i></span>
+      <span class="name-chip" data-name="the art of trading ">The Art Of Trading</span>
+      <span class="name-chip" data-name="the final chapter by vvv ict">The Final Chapter by vvv <i>ICT</i></span>
+      <span class="name-chip" data-name="the institutional protocol ">The Institutional Protocol</span>
+      <span class="name-chip" data-name="the lions den ict">The Lions Den <i>ICT</i></span>
+      <span class="name-chip" data-name="the ohlc group by fx4_living ict">The OHLC Group by fx4_living <i>ICT</i></span>
+      <span class="name-chip" data-name="the ryze network ict">The Ryze Network <i>ICT</i></span>
+      <span class="name-chip" data-name="the shift by eli ">The Shift by Eli</span>
+      <span class="name-chip" data-name="the violet framework by violet ict">The Violet Framework by Violet <i>ICT</i></span>
+      <span class="name-chip" data-name="the volume traders ">The Volume Traders</span>
+      <span class="name-chip" data-name="tick precision trades by habil.trds ">Tick Precision Trades by Habil.Trds</span>
+      <span class="name-chip" data-name="tig towers by tig ">Tig Towers by tig</span>
+      <span class="name-chip" data-name="timeless by timeless trading llc ">Timeless by Timeless Trading LLC</span>
+      <span class="name-chip" data-name="tjr 3 day course ">Tjr 3 Day Course</span>
+      <span class="name-chip" data-name="tjr mastermind 2.0 ict">TJR Mastermind 2.0 <i>ICT</i></span>
+      <span class="name-chip" data-name="tjr mastermind 4.0 ">Tjr Mastermind 4.0</span>
+      <span class="name-chip" data-name="tomtrades by tomtrades ">TomTrades by TomTrades</span>
+      <span class="name-chip" data-name="transparent fx ">Transparent FX</span>
+      <span class="name-chip" data-name="traqs msnr">Traqs <i>MSNR</i></span>
+      <span class="name-chip" data-name="tsr | the soup room ">TSR | The Soup Room</span>
+      <span class="name-chip" data-name="ttrades ict">TTrades <i>ICT</i></span>
+      <span class="name-chip" data-name="vertex ">Vertex</span>
+      <span class="name-chip" data-name="void ">Void</span>
+      <span class="name-chip" data-name="vvv 1-1 ict">VVV 1-1 <i>ICT</i></span>
+      <span class="name-chip" data-name="wallstreet wizards ">WallStreet Wizards</span>
+      <span class="name-chip" data-name="walter deviation (1-1) lit">Walter Deviation (1-1) <i>LIT</i></span>
+      <span class="name-chip" data-name="walter premium by walter ict">WALTER PREMIUM by Walter <i>ICT</i></span>
+      <span class="name-chip" data-name="wick mechanics by michael ">WICK MECHANICS by Michael</span>
+      <span class="name-chip" data-name="wicked by pxssive ">Wicked by Pxssive</span>
+      <span class="name-chip" data-name="xyuu&#x27;s black box by xyuu&#x27;s black box ">Xyuu&#x27;s Black Box by Xyuu&#x27;s Black Box</span>
+      <span class="name-chip" data-name="yarami university ict">Yarami University <i>ICT</i></span>
+      <span class="name-chip" data-name="yz mentorship ">YZ Mentorship</span>
+      <span class="name-chip" data-name="zayuus trading hall ict">zayuus trading hall <i>ICT</i></span>
+      <span class="name-chip" data-name="zed trading accelerator by trader zed ict">Zed Trading Accelerator by Trader Zed <i>ICT</i></span>
+      <span class="name-chip" data-name="zeusy ">Zeusy</span>
+      <span class="name-chip" data-name="zlatan 2025 ">Zlatan 2025</span>
+      <span class="name-chip" data-name="φ stdv by 1.618 ">Φ STDV by 1.618</span>
+    </div>
+    <p class="name-note">MonsterLabs names and categories were captured from their public catalogue on 22 Nov 2026. The catalogue lists 158 courses; 157 names were captured and one entry was missing, so it is not listed here. The 7 courses that also exist in the Vault are shown once, under the Vault library. MonsterLabs course prices are not set — open a ticket in Discord.</p>
+  </div>
+</section>
+
 <!-- ======================= BUNDLE ======================= -->
 <section id="bundle">
   <div class="wrap">
@@ -1005,6 +1294,8 @@ src="https://www.facebook.com/tr?id=1334543985442173&ev=PageView&noscript=1"
       </a>
       <nav class="foot-links" aria-label="Footer">
         <a href="#free-lesson">Free Lesson</a>
+        <a href="#platform">Course platform</a>
+        <a href="#all-courses">All courses</a>
         <a href="#courses">Courses</a>
         <a href="#bundle">Bundle — $199</a>
         <a href="https://discord.gg/c9pCw5DcuH" target="_blank" rel="noopener" data-track="discord">Discord</a>
@@ -1088,6 +1379,25 @@ src="https://www.facebook.com/tr?id=1334543985442173&ev=PageView&noscript=1"
         document.body.removeChild(ta); done();
       }
     });
+  })();
+  // All-courses name filter.
+  (function () {
+    var input = document.getElementById('allCoursesSearch');
+    var count = document.getElementById('allCoursesCount');
+    var chips = document.querySelectorAll('#all-courses .name-chip');
+    if (!input) { return; }
+    function apply() {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      chips.forEach(function (c) {
+        var hit = !q || c.getAttribute('data-name').indexOf(q) !== -1;
+        c.hidden = !hit;
+        if (hit) { shown++; }
+      });
+      count.textContent = shown + ' of ' + chips.length + ' courses shown';
+    }
+    input.addEventListener('input', apply);
+    apply();
   })();
 </script>
 </body>
